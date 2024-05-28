@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {CheckTreePicker as RsuiteCheckTreePicker} from 'rsuite';
-import 'rsuite/dist/rsuite.min.css';
+import 'rsuite/CheckTreePicker/styles/index.css';
 
 import {CustomProvider} from 'rsuite';
 import nl_NL from 'rsuite/locales/nl_NL';

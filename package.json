@@ -1,6 +1,6 @@
 {
   "name": "dash_rsuite_components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dash Rsuite Components is a Dash component library based on React Suite Components",
   "main": "build/index.js",
   "scripts": {
