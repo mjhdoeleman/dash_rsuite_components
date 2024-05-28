@@ -3,20 +3,20 @@ from dash import Dash, callback, html, Input, Output
 
 app = Dash(__name__)
 
-app.layout = html.Div([
-    dash_rsuite_components.CheckTreePicker(
-        id='input',
-        value='my-value',
-        label='my-label'
-    ),
-    html.Div(id='output')
-])
+app.layout = html.Div(
+    [
+        dash_rsuite_components.CheckTreePicker(
+            id="test-tree",
+        ),
+        html.Div(id="output"),
+    ]
+)
 
 
-@callback(Output('output', 'children'), Input('input', 'value'))
-def display_output(value):
-    return 'You have entered {}'.format(value)
+@callback(Output("output", "children"), Input("test-tree", "selected"))
+def display_output(selected):
+    return "You have selected the following key(s): {}".format(selected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run_server(debug=True)
