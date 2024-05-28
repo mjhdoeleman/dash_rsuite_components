@@ -57,17 +57,62 @@ CheckTreePicker.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
 
     /**
-     * A label that will be printed when this component is rendered.
+     * The appearance of the component. Can be `default` or `subtle`.
      */
-    label: PropTypes.string.isRequired,
+    appearance: PropTypes.string,
 
     /**
-     * The value displayed in the input.
+     * Whether to take up the full width of the parent container.
      */
-    value: PropTypes.string,
+    block: PropTypes.bool,
+
+    /**
+     * Whether to enable cascade selection.
+     */
+    cascade: PropTypes.bool,
+
+    /**
+     * Whether to display the clear button
+     */
+    cleanable: PropTypes.bool,
+
+    /**
+     * Whether to display the count of selected items
+     */
+    countable: PropTypes.bool,
+
+    /**
+     * The Tree Data
+     */
+    data: PropTypes.array,
+
+    /**
+     * Custom locale for component
+     */
+    custom_locale: PropTypes.object,
+
+    /**
+     * Whether to expand all nodes by default
+     */
+    defaultExpandAll: PropTypes.bool,
+
+    /**
+     * The placement of the popup. Can be 'bottomStart', 'bottomEnd', 'topStart', 'topEnd'.
+     */
+    placement: PropTypes.string,
+
+    /**
+     * Selected value(s)
+     */
+    selected: PropTypes.arrayOf(PropTypes.string),
+
+    /**
+     * Custom styling of the component.
+     */
+    style: PropTypes.object,
 
     /**
      * Dash-assigned callback that should be called to report property changes
