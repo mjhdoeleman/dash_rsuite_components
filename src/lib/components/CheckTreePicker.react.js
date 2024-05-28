@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {CheckTreePicker as RsuiteCheckTreePicker} from 'rsuite';
+import 'rsuite/dist/rsuite.min.css';
 
 import {CustomProvider} from 'rsuite';
 import nl_NL from 'rsuite/locales/nl_NL';
@@ -21,7 +22,7 @@ const CheckTreePicker = (props) => {
         selected,
         style,
         setProps,
-    } = this.props;
+    } = props;
 
     return (
         <CustomProvider locale={custom_locale}>
