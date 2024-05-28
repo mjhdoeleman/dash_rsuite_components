@@ -51,7 +51,42 @@ const CheckTreePicker = (props) => {
     );
 };
 
-CheckTreePicker.defaultProps = {};
+CheckTreePicker.defaultProps = {
+    appearance: 'default',
+    block: false,
+    cascade: true,
+    cleanable: true,
+    countable: false,
+    defaultExpandAll: false,
+    custom_locale: nl_NL,
+    placement: 'bottomStart',
+    data: [
+        {
+            label: 'A',
+            value: 'a',
+            children: [
+                {label: 'A1', value: 'a1'},
+                {label: 'A2', value: 'a2'},
+            ],
+        },
+        {
+            label: 'B',
+            value: 'b',
+            children: [
+                {
+                    label: 'B1',
+                    value: 'b1',
+                    children: [
+                        {label: 'B11', value: 'b11'},
+                        {label: 'B12', value: 'b12'},
+                    ],
+                },
+                {label: 'B2', value: 'b2'},
+            ],
+        },
+    ],
+    selected: [],
+};
 
 CheckTreePicker.propTypes = {
     /**
