@@ -6,13 +6,6 @@ import {CheckTreePicker as RsuiteCheckTreePicker} from 'rsuite';
 import {CustomProvider} from 'rsuite';
 import nl_NL from 'rsuite/locales/nl_NL';
 
-/**
- * ExampleComponent is an example component.
- * It takes a property, `label`, and
- * displays it.
- * It renders an input with the property `value`
- * which is editable by the user.
- */
 const CheckTreePicker = (props) => {
     const {
         id,
